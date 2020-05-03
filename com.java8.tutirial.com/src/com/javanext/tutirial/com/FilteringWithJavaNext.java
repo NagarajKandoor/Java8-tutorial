@@ -21,20 +21,22 @@ public class FilteringWithJavaNext {
 
 	}
 
-	public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
-		List<Apple> result = new ArrayList<Apple>();
-		for (Apple a : inventory) {
+	public static <T> List<T> filterApples(List<T> inventory, Predicate<T> p) {
+		List<T> result = new ArrayList<>();
+		for (T a : inventory) {
 			if (p.test(a)) {
 				result.add(a);
 			}
 		}
 		return result;
 	}
+
 	public static boolean isGreen(Apple a) {
-		return "Green".equals(a.getColour());		
+		return "Green".equals(a.getColour());
 	}
+
 	public static boolean isHeavyApple(Apple a) {
-		return a.getWeight()>5;
+		return a.getWeight() > 5;
 	}
 
 }
