@@ -1,4 +1,4 @@
-package com.javanext.tutirial.com;
+package com.javanext.tutorial.com;
 
 import java.util.ArrayList;
 import java.util.Arrays;

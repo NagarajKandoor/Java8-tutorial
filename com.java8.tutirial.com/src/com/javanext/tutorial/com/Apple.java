@@ -1,4 +1,4 @@
-package com.javanext.tutirial.com;
+package com.javanext.tutorial.com;
 
 /**
  * @author Nagaraj
