@@ -27,15 +27,15 @@ public class BuiltInFunctionalInterface {
 		BuiltInFunctionalInterfacePredicate predicate = new BuiltInFunctionalInterfacePredicate();
 		System.out.println(predicate.test("5"));
 		
-		//lambda pridicate 
+		//lambda pridicate use incase of boolean validation
 		Predicate<String> predicatelambda = (value) -> value != null;
 		System.out.println(predicatelambda.test("8"));
 		
-		//Lambda Supplier 
+		//Lambda Supplier  use in case of producing
 		Supplier<Integer> supplier = ()->new Integer((int) (Math.random() * 100D));
 		System.out.println(supplier.get());
 		
-		//lambda consumer 
+		//lambda consumer use in case of consuming 
 		Consumer<Integer> consumer = (value) -> System.out.println(value);
 		consumer.accept(5);
 	}
