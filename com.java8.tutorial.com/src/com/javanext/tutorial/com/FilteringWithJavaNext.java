@@ -2,6 +2,7 @@ package com.javanext.tutorial.com;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -18,7 +19,11 @@ public class FilteringWithJavaNext {
 		System.out.println(greenApples);
 		List<Apple> heavyApple = filterApples(inventory, FilteringWithJavaNext::isHeavyApple);
 		System.out.println(heavyApple);
-
+		//lambda experssion
+		inventory.sort((a1, a2) -> Integer.valueOf(a1.getWeight()).compareTo(Integer.valueOf(a2.getWeight())));
+		Comparator<Apple> c = Comparator.comparing((Apple a) -> a.getWeight());
+		//method reference 
+		inventory.sort(Comparator.comparing(Apple::getWeight));
 	}
 
 	public static <T> List<T> filterApples(List<T> inventory, Predicate<T> p) {
