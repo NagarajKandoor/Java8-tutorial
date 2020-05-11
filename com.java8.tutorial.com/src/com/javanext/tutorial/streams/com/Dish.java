@@ -47,7 +47,7 @@ public class Dish {
 	}
 
 	public enum Type {
-		MEAT, FISH, OTHER
+		MEAT, FISH, VEG
 	}
 
 }
