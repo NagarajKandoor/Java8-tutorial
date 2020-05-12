@@ -52,9 +52,14 @@ public class DishTesting {
 		boolean isHealthy = menu.stream().allMatch(dish -> dish.getCalories() < 1000);
 
 		boolean isHealthyNot = menu.stream().noneMatch(d -> d.getCalories() >= 1000);
-		
+
 		Optional<Dish> findAny = menu.stream().filter(d -> d.getType() == Dish.Type.VEG).findAny();
-		
+		// Reduce
+		int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+		System.out.println(sum);
+		//max
+		Optional<Integer> max = numbers.stream().reduce(Integer::max);
+		System.out.println(max.get());
 
 	}
 
